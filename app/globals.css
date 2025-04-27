@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 220 14% 96%; /* Light gray background */
+    --foreground: 220 23% 21%; /* Dark gray text */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 142 66% 57%; /* Calming green primary */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 210 22% 80%; /* Light blue secondary */
+    --secondary-foreground: 220 23% 21%; /* Dark gray text on secondary */
+    --muted: 220 20% 76%; /* Light gray muted background */
+    --muted-foreground: 220 15% 46%; /* Medium gray muted text */
+    --accent: 203 56% 82%; /* light accent blue */
+    --accent-foreground: 220 23% 21%; /* Dark gray text on accent */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 43% 91%; /* Light gray border */
+    --input: 220 43% 91%; /* Light gray input background */
+    --ring: 153 71% 59%; /* Green ring color */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 220 14% 96%;
+    --sidebar-foreground: 220 23% 21%;
+    --sidebar-primary: 142 66% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 56% 82%;
+    --sidebar-accent-foreground: 220 23% 21%;
+    --sidebar-border: 220 43% 91%;
+    --sidebar-ring: 153 71% 59%;
+  }
+  .dark {
+    --background: 220 13% 15%; /* Dark blue background */
+    --foreground: 220 14% 96%; /* Light gray text */
+    --card: 220 13% 15%;
+    --card-foreground: 220 14% 96%;
+    --popover: 220 13% 15%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 142 66% 57%; /* Calming green primary */
+    --primary-foreground: 0 0% 0%; /* Black text on primary */
+    --secondary: 220 27% 31%; /* Medium blue secondary */
+    --secondary-foreground: 220 14% 96%; /* Light gray text on secondary */
+    --muted: 220 27% 31%; /* Medium blue muted background */
+    --muted-foreground: 220 14% 56%; /* Slightly lighter gray muted text */
+    --accent: 220 27% 31%; /* Medium blue accent */
+    --accent-foreground: 220 14% 96%; /* Light gray text on accent */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 27% 31%; /* Medium blue border */
+    --input: 220 27% 31%; /* Medium blue input background */
+    --ring: 153 71% 59%; /* Green ring color */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 220 13% 15%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 142 66% 57%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 220 27% 31%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 220 27% 31%;
+    --sidebar-ring: 153 71% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Ensure the app takes up the full screen */
+html, body, #__next {
+  height: 100%; /* Use 100% of the viewport height */
+}
+
+/* Styles for transaction list on account pages */
+.transaction-list {
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Add some padding for scrollbar */
+}
